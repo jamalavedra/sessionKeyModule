@@ -9,6 +9,8 @@ dotenvConfig({ path: resolve(__dirname, "./.env") });
 const chainIds = {
   ganache: 1337,
   goerli: 5,
+  "optimism-goerli":420,
+  "polygon-mumbai":80001,
   hardhat: 31337,
   kovan: 42,
   mainnet: 1,
@@ -51,6 +53,8 @@ const config: HardhatUserConfig = {
     goerli: createTestnetConfig("goerli"),
     kovan: createTestnetConfig("kovan"),
     rinkeby: createTestnetConfig("rinkeby"),
+    "optimism-goerli": createTestnetConfig("optimism-goerli"),
+    "polygon-mumbai": createTestnetConfig("polygon-mumbai"),
     ropsten: createTestnetConfig("ropsten"),
   },
   solidity: {
